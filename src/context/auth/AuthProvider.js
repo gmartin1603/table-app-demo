@@ -5,13 +5,16 @@ import { auth } from '../../firebase/auth';
 import { getData, getUser, writeData } from '../../firebase/firestore';
 import useAuthChange from '../../helpers/authStateChange';
 
+
+
 export const AuthContext = createContext();
 
 
 
 export const AuthProvider = ({ children }) => {
     
-    const user = useAuthChange('')
+    // const user = useAuthChange('')
+    const user = "default"
     const [profile, setProfile] = useState({})
     const [show, setShow] = useState(false)
     const [showWeek, setShowWeek] = useState(false)

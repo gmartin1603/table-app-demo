@@ -22,7 +22,7 @@ const app = express();
 app.use('*' ,cors({origin:URLs.local}));
 
 //Admin SDK init
-const serviceAccount = require("./private/overtime-management-83008-firebase-adminsdk-q8kc2-1956d61a57.json");
+const serviceAccount = require("./private/admin-sdk-test-2e7ea-firebase-adminsdk-2moxv-e28dae166a.json");
 initializeApp({
     credentials: serviceAccount
 });
@@ -90,12 +90,15 @@ exports.app = functions.https.onRequest(app)
 
 //Express init
 const fsApp = express()
+const writeDoc = require('./writeDoc.js')
 
 //cors init
-// fsApp.use('*' ,cors({
-//   origin: "https://localhost:3000",
+fsApp.use('*' ,cors({
+  origin: true,
 
-// }));
+}));
+
+fsApp.use('/writeDoc', writeDoc)
 
 fsApp.get('/', async (req,res) => {
   let load = {}

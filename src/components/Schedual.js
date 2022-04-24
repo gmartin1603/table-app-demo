@@ -7,6 +7,7 @@ import useWindowSize from '../helpers/windowSize';
 import usePostsListener from '../helpers/postsListener';
 import TableBody from './TableBody';
 
+import {a} from '../testData/cascData'
 
 //************** TODO **************** */
 // border between op, pack and misc positions 
@@ -20,7 +21,10 @@ import TableBody from './TableBody';
 
 function Schedual() {
 
-  const {profile, view} = useAuthState()
+  const {profile} = useAuthState()
+  
+  const view = [a.rota,]
+
   const [width, height] = useWindowSize([0,0]);
   
   const [cols, setCols] = useState([])

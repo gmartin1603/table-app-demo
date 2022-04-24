@@ -133,8 +133,8 @@ function PopUpForm({show,dept}) {
         //     data: post
         // }
 
-        // const URL ="http://localhost:5000/overtime-management-83008/us-central1/fsApp/updateDoc"
-        const URL ="https://us-central1-overtime-management-83008.cloudfunctions.net/fsApp/updateDoc"
+        const URL ="http://localhost:5000 /fsApp/updateDoc"
+        // const URL ="https: fsApp/updateDoc"
 
         await fetch(URL, {
             method: 'POST',

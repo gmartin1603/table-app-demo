@@ -11,10 +11,15 @@ import { csst } from './testData/csstData'
 import { casc } from './testData/cascData'
 import { Outlet, useNavigate } from 'react-router-dom';
 
+import {a} from './testData/cascData'
+
 
 function App() {
 
-  const {user, profile, colls, view} = useAuthState()
+  const {user, profile, colls} = useAuthState()
+
+  const view = [a.rota,]
+
   const navigate = useNavigate()
   useEffect(() => {
     if (profile.role) {

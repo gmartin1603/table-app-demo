@@ -8,6 +8,10 @@ import MiscForm from './MiscForm';
 import PopUpForm from './PopUpForm';
 import Schedual from './Schedual';
 
+
+import {a} from '../testData/cascData'
+
+
 //************ TODO ************* */
 // form for filling misc overtime
 // manage users page
@@ -21,7 +25,11 @@ import Schedual from './Schedual';
 
 function AdminApp({rows}) {
 
-    const {show, showWeek, view} = useAuthState()
+    const {show, showWeek} = useAuthState()
+
+    
+    const view = [a.rota,]
+
     const [depts, setDepts] = useState()
     
     

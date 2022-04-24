@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { useAuthState } from '../context/auth/AuthProvider';
 import {header} from '../context/style/style'
 
 function Header({tabs}) {
     const [value, setValue] = useState('');
-    const {colls, profile, logOff, view, toggleView} = useAuthState()
+    const { profile, logOff, view, toggleView} = useAuthState()
+
+    const colls = []
 
     const user = {
         email: '',

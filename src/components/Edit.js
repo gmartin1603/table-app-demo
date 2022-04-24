@@ -14,7 +14,7 @@ function Edit(props) {
         if (obj.id) {
 
         } else {
-            url = `${URLs.userAppLocal}/newUser`
+            url = `${URLs.appLocal}/newUser`
             await fetch(url,{
                 method: 'POST',
                 mode: 'cors',
