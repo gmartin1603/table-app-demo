@@ -13,8 +13,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     
-    // const user = useAuthChange('')
-    const user = "default"
+    const user = useAuthChange('')
     const [profile, setProfile] = useState({})
     const [show, setShow] = useState(false)
     const [showWeek, setShowWeek] = useState(false)
